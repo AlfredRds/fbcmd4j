@@ -39,6 +39,7 @@ public class Main {
 						case 0:
 							break;
 						case 1:
+							
 							System.out.println("Iniciando publicar en grupo...");
 							System.out.println("Escoge un grupo ");
 							fb.getAllGroups();
@@ -46,9 +47,13 @@ public class Main {
 								String groupId = fb.getGroup(sc.nextInt());
 
 								if( groupId != null) {
+									System.out.println("Escribe 0 cuando no quieras escribir nada");
 									System.out.print("Escribe el mensaje: ");
 									String message = sc.next(); 
-									fb.publish(groupId, message);
+									System.out.print("link: ");
+									sc = new Scanner(System.in);
+									String link = sc.next();
+									fb.publish(groupId, message, link);
 								}else {
 									System.out.println("El grupo que usted selecciono no existe");
 								}

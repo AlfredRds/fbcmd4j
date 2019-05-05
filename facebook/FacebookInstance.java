@@ -17,6 +17,7 @@ import com.restfb.FacebookClient;
 //Post
 import com.restfb.Parameter;
 import com.restfb.Version;
+import com.restfb.exception.FacebookOAuthException;
 import com.restfb.types.FacebookType;
 import com.restfb.types.GraphResponse;
 
@@ -246,15 +247,20 @@ public class FacebookInstance {
 		return groupID;
 	}
 	
-	public void publish(String groupID, String message) {
+	public void publish(String groupID, String message, String link) {
 		try {
 			FacebookClient fbClient = new DefaultFacebookClient(this.accessToken, Version.LATEST);
-			fbClient.publish( groupID + "/feed", FacebookType.class, Parameter.with("message", message));
+			Parameter msg, li;
+			if(message.length() > 1 && message != null)msg = Parameter.with("message", message);else msg = Parameter.with("message", " ");
+			if(link.length() > 1 && link != null)li = Parameter.with("link", link);else li = Parameter.with("link", "");
+			fbClient.publish( groupID + "/feed", FacebookType.class,msg,li);
 			log.loggerInfo("Se ha publicado en el grupo con exito");
+		}catch(FacebookOAuthException ex) {
+			log.loggerInfo("El link que se ingreso es incorrecto");
+			System.out.println("El link que ingreso es incorrecto, proporcione un link correcto " + ex);
 		}catch(Exception ex) {
-			ex.printStackTrace();
-			log.loggerInfo("Ha ocurrido un error al intentar publicar en grupo " + ex);
+			log.loggerInfo("Ha ocurrido un error al intentar publicar en grupo ");
+			System.out.println("Ha ocurrido un error al intentar publicar en grupo " + ex);
 		}
-
 	}
 }
