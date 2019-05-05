@@ -24,8 +24,10 @@ public class Main {
 					System.exit(0);
 					break;
 				case 1:
-
+					System.out.println("Mostrando NewsFeed...");
+					fb.getFeed();
 					break;
+					
 			}
 		}
 
@@ -42,6 +44,7 @@ public class Main {
 		
 		return sc.nextInt();
 	}
+	
 }
 
 

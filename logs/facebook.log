@@ -1,0 +1,3 @@
+2019-05-04 21:31:04.517 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-04 21:31:06.436 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-04 21:31:21.504 [main] INFO  facebook.LoggerFacebook - El usuario ha abandonado la sesion

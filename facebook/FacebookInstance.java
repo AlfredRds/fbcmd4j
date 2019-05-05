@@ -1,10 +1,14 @@
 package facebook;
 
 //Librerias de Facebook4j
+//Auth
 import facebook4j.FacebookFactory;
 import facebook4j.auth.AccessToken;
 import facebook4j.Facebook;
 import facebook4j.FacebookException;
+//Feed
+import facebook4j.ResponseList;
+import facebook4j.Post;
 
 //Librerias para leer las propiedades
 import java.io.FileInputStream;
@@ -136,11 +140,37 @@ public class FacebookInstance {
             setAppSecret(prop.getProperty("appSecret"));
             setPageID(prop.getProperty("pageID"));
             setPageToken(prop.getProperty("pageToken"));
+            log.loggerInfo("Se han cargado las propiedades con exito");
 
         } catch (IOException ex) {
             ex.printStackTrace();
+            log.loggerInfo("Ha ocurrido un error al intentar cargar el archivo de propiedades " + ex);
         }
 	}
 	
+	public void getFeed() {
+		try {
+			ResponseList<Post> feed = facebook.getFeed();
+			for(int i=0;i<feed.size();i++){
+			    System.out.println("------------------------------------------------------------");
+			    if(feed.get(i).getCaption()!=null)System.out.println("Caption: " + feed.get(i).getCaption());
+			    if(feed.get(i).getDescription()!=null)System.out.println("Description" + feed.get(i).getDescription());
+			    if(feed.get(i).getStory()!=null)System.out.println("Story: " + feed.get(i).getStory());
+			    if(feed.get(i).getName()!=null)System.out.println("Name: " + feed.get(i).getName());
+			    if(feed.get(i).getMessage()!=null)System.out.println("Message: " + feed.get(i).getMessage());
+			    if(feed.get(i).getCreatedTime()!=null)System.out.println("Created Time: " + feed.get(i).getCreatedTime());
+			    if(feed.get(i).getPicture()!=null)System.out.println("Picture: " + feed.get(i).getPicture());
+			    if(feed.get(i).getFullPicture()!=null)System.out.println("Picture: " + feed.get(i).getFullPicture());
+			    if(feed.get(i).getPermalinkUrl()!=null)System.out.println("PermaLink: " + feed.get(i).getPermalinkUrl());
+			    if(feed.get(i).getLink()!=null)System.out.println("Link: " + feed.get(i).getLink());
+			    System.out.println("------------------------------------------------------------");
+			}
+			log.loggerInfo("El usuario obtuvo su feed con exito");
+		}catch(FacebookException fbex) {
+			fbex.printStackTrace();
+			log.loggerInfo("Ha ocurrido un error al intentar obtener el feed " + fbex);
+		}
+		
+	}
 	
 }
