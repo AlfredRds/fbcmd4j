@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-api-2.4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-core-2.4.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j2"/>
+	<classpathentry kind="lib" path="C:/Users/david/Documents/Tecmilenio/EvidenciaFacebook/fbcmd4j/lib/facebook4j-core-2.4.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/david/Documents/Tecmilenio/EvidenciaFacebook/fbcmd4j/lib/restfb-2.20.0.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
