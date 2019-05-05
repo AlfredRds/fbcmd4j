@@ -9,6 +9,16 @@ import facebook4j.FacebookException;
 //Feed
 import facebook4j.ResponseList;
 import facebook4j.Post;
+import facebook4j.Group;
+
+//Librerias RestFacebook
+import com.restfb.DefaultFacebookClient;
+import com.restfb.FacebookClient;
+//Post
+import com.restfb.Parameter;
+import com.restfb.Version;
+import com.restfb.types.FacebookType;
+import com.restfb.types.GraphResponse;
 
 //Librerias para leer las propiedades
 import java.io.FileInputStream;
@@ -16,15 +26,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+
+
 public class FacebookInstance {
 	private LoggerFacebook log = new LoggerFacebook();
 	
-	Facebook facebook;
-	String accessToken;
-	String appID;
-	String appSecret;
-	String pageID;
-	String pageToken;
+	private Facebook facebook;
+	private FacebookClient fbClient;
+	private String accessToken;
+	private String appID;
+	private String appSecret;
+	private String pageID;
+	private String pageToken;
+	private ResponseList<Group> groups;
 
 	public Facebook getFacebook() {
 		return facebook;
@@ -32,6 +46,14 @@ public class FacebookInstance {
 
 	public void setFacebook(Facebook facebook) {
 		this.facebook = facebook;
+	}
+	
+	public FacebookClient getFbClient() {
+		return fbClient;
+	}
+
+	public void setFbClient(FacebookClient fbClient) {
+		this.fbClient = fbClient;
 	}
 
 	public String getAccessToken() {
@@ -173,4 +195,66 @@ public class FacebookInstance {
 		
 	}
 	
+	public void getWall() {
+		try {
+			ResponseList<Post> wall = this.facebook.getPosts();
+			for(int i=0;i<wall.size();i++){
+			    System.out.println("------------------------------------------------------------");
+			    if(wall.get(i).getCaption()!=null)System.out.println("Caption: " + wall.get(i).getCaption());
+			    if(wall.get(i).getDescription()!=null)System.out.println("Description" + wall.get(i).getDescription());
+			    if(wall.get(i).getStory()!=null)System.out.println("Story: " + wall.get(i).getStory());
+			    if(wall.get(i).getName()!=null)System.out.println("Name: " + wall.get(i).getName());
+			    if(wall.get(i).getMessage()!=null)System.out.println("Message: " + wall.get(i).getMessage());
+			    if(wall.get(i).getCreatedTime()!=null)System.out.println("Created Time: " + wall.get(i).getCreatedTime());
+			    if(wall.get(i).getPicture()!=null)System.out.println("Picture: " + wall.get(i).getPicture());
+			    if(wall.get(i).getFullPicture()!=null)System.out.println("Picture: " + wall.get(i).getFullPicture());
+			    if(wall.get(i).getPermalinkUrl()!=null)System.out.println("PermaLink: " + wall.get(i).getPermalinkUrl());
+			    if(wall.get(i).getLink()!=null)System.out.println("Link: " + wall.get(i).getLink());
+			    System.out.println("------------------------------------------------------------");
+			} 
+			
+		}catch(FacebookException fbex) {
+			fbex.printStackTrace();
+			log.loggerInfo("Ha ocurrido un error al intentar obtener el muro " + fbex);
+		}
+	}
+
+	public void getAllGroups() {
+		try {
+			groups = this.facebook.getGroups();
+			for(int i=0;i<groups.size();i++){
+			    System.out.print(i + ".- ");
+			    if(groups.get(i).getName()!=null)System.out.println(groups.get(i).getName());
+			}
+			log.loggerInfo("El usuario obtuvo sus grupos con exito");
+		}catch(FacebookException fbex) {
+			fbex.printStackTrace();
+			log.loggerInfo("Ha ocurrido un error al intentar recuperar los grupos " + fbex);
+		}
+		
+	}
+	
+	public String getGroup(int number) {
+		//if(groups.get(i).getId()!=null)System.out.println("Id: " + groups.get(i).getId());
+		String groupID = null;
+		try {
+			groupID = groups.get(number).getId();
+			log.loggerInfo("El usuario selecciono el grupo con exito");
+		}catch(Exception ex) {
+			log.loggerInfo("Ha ocurrido un error al intentar seleccionar el grupo");
+		}
+		return groupID;
+	}
+	
+	public void publish(String groupID, String message) {
+		try {
+			FacebookClient fbClient = new DefaultFacebookClient(this.accessToken, Version.LATEST);
+			fbClient.publish( groupID + "/feed", FacebookType.class, Parameter.with("message", message));
+			log.loggerInfo("Se ha publicado en el grupo con exito");
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			log.loggerInfo("Ha ocurrido un error al intentar publicar en grupo " + ex);
+		}
+
+	}
 }

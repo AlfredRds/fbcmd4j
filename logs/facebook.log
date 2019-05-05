@@ -1,3 +1,21 @@
-2019-05-04 21:31:04.517 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
-2019-05-04 21:31:06.436 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
-2019-05-04 21:31:21.504 [main] INFO  facebook.LoggerFacebook - El usuario ha abandonado la sesion
+2019-05-05 00:31:44.700 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 00:31:44.704 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 00:31:45.595 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 00:33:34.390 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 00:33:34.393 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 00:33:35.299 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 00:33:45.380 [main] INFO  facebook.LoggerFacebook - Se ingresaron caracteres no validos
+2019-05-05 00:34:00.825 [main] INFO  facebook.LoggerFacebook - Se ingresaron caracteres no validos
+2019-05-05 00:34:03.337 [main] INFO  facebook.LoggerFacebook - Se ingresaron caracteres no validos
+2019-05-05 00:34:56.234 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 00:35:02.698 [main] INFO  facebook.LoggerFacebook - Se ingresaron caracteres no validos
+2019-05-05 00:35:18.814 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 00:35:49.986 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 00:35:54.794 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito
+2019-05-05 00:35:59.584 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 00:36:01.642 [main] INFO  facebook.LoggerFacebook - Se ingresaron caracteres no validos
+2019-05-05 00:36:06.132 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 00:36:07.995 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar seleccionar el grupo java.lang.IndexOutOfBoundsException: Index: 123123, Size: 25
+2019-05-05 00:38:52.328 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 00:38:53.257 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 00:39:02.773 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito
