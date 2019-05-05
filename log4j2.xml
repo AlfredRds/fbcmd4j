@@ -13,7 +13,7 @@
 	</Appenders>
 	<Loggers>
 		<Root level="info"/>
-		<Logger name="facebook.Main" level="info">
+		<Logger name="facebook.LoggerFacebook" level="info">
 			<AppenderRef ref="Logfile" ></AppenderRef>
 			<AppenderRef ref="Logfile" />
 		</Logger>
