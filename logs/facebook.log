@@ -126,3 +126,95 @@
 2019-05-05 12:52:19.128 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito
 2019-05-05 12:52:24.980 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
 2019-05-05 12:52:26.379 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:02:41.579 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:02:41.586 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:02:42.496 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 15:02:45.541 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 15:08:46.193 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:08:46.210 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:08:47.159 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 15:08:48.748 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 15:12:20.135 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:12:20.141 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:12:21.202 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error message - Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.
+code - 190
+subcode - 460
+Relevant information for error recovery can be found on the Facebook Developers Document:
+	https://developers.facebook.com/docs/graph-api/using-graph-api/#errors
+
+FacebookException{statusCode=400, errorType='OAuthException', errorMessage='Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.', errorCode=190, errorSubcode=460, version=2.4.13}
+2019-05-05 15:12:22.868 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar obtener el feed message - Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.
+code - 190
+subcode - 460
+Relevant information for error recovery can be found on the Facebook Developers Document:
+	https://developers.facebook.com/docs/graph-api/using-graph-api/#errors
+
+FacebookException{statusCode=400, errorType='OAuthException', errorMessage='Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.', errorCode=190, errorSubcode=460, version=2.4.13}
+2019-05-05 15:13:58.233 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:13:58.238 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:13:59.182 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 15:14:00.728 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 15:19:43.534 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 15:20:14.091 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 15:20:17.712 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:20:28.530 [main] INFO  facebook.LoggerFacebook - El link que se ingreso es incorrecto
+2019-05-05 15:22:24.196 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 15:22:26.472 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:22:41.055 [main] INFO  facebook.LoggerFacebook - El link que se ingreso es incorrecto
+2019-05-05 15:22:53.279 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 15:22:54.424 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:23:06.096 [main] INFO  facebook.LoggerFacebook - El link que se ingreso es incorrecto
+2019-05-05 15:27:06.917 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:27:06.921 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:27:07.924 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 15:27:22.066 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 15:27:23.600 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:27:44.381 [main] INFO  facebook.LoggerFacebook - El link que se ingreso es incorrecto
+2019-05-05 15:28:20.412 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 15:28:20.418 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 15:28:24.441 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 15:28:29.397 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 15:28:30.632 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 15:28:34.987 [main] INFO  facebook.LoggerFacebook - El link que se ingreso es incorrecto
+2019-05-05 16:13:43.112 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:13:43.118 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:13:44.119 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:13:46.911 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 16:23:19.495 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:23:19.499 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:23:20.446 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:23:43.162 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:26:55.671 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:26:55.681 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:26:56.643 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:27:04.317 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:27:40.267 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:27:40.271 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:27:44.240 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:27:50.660 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:29:57.063 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:29:57.068 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:29:58.026 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:30:02.303 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:35:54.276 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:35:54.282 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:35:55.209 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:36:26.714 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:40:41.890 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:40:41.896 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:40:42.911 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:40:45.176 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 16:40:55.456 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 16:40:56.998 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 16:41:13.303 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito
+2019-05-05 16:42:39.620 [main] INFO  facebook.LoggerFacebook - Ha ocurrido un error al intentar pubilcar en perfil
+2019-05-05 16:47:45.372 [main] INFO  facebook.LoggerFacebook - Inicializando Facebook
+2019-05-05 16:47:45.377 [main] INFO  facebook.LoggerFacebook - Se han cargado las propiedades con exito
+2019-05-05 16:47:46.385 [main] INFO  facebook.LoggerFacebook - Se ha creado una nueva instancia de Facebook
+2019-05-05 16:47:48.610 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo su feed con exito
+2019-05-05 16:48:12.321 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 16:50:17.069 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 16:51:34.941 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito
+2019-05-05 16:53:13.164 [main] INFO  facebook.LoggerFacebook - El usuario obtuvo sus grupos con exito
+2019-05-05 16:53:14.384 [main] INFO  facebook.LoggerFacebook - El usuario selecciono el grupo con exito
+2019-05-05 16:53:26.889 [main] INFO  facebook.LoggerFacebook - Se ha publicado en el grupo con exito

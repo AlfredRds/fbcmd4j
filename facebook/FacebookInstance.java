@@ -9,6 +9,7 @@ import facebook4j.FacebookException;
 //Feed
 import facebook4j.ResponseList;
 import facebook4j.Post;
+import facebook4j.PostUpdate;
 import facebook4j.Group;
 
 //Librerias RestFacebook
@@ -25,6 +26,7 @@ import com.restfb.types.GraphResponse;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
 
 
@@ -249,7 +251,7 @@ public class FacebookInstance {
 	
 	public void publish(String groupID, String message, String link) {
 		try {
-			FacebookClient fbClient = new DefaultFacebookClient(this.accessToken, Version.LATEST);
+			FacebookClient fbClient = new DefaultFacebookClient(this.accessToken, Version.VERSION_3_2);
 			Parameter msg, li;
 			if(message.length() > 1 && message != null)msg = Parameter.with("message", message);else msg = Parameter.with("message", " ");
 			if(link.length() > 1 && link != null)li = Parameter.with("link", link);else li = Parameter.with("link", "");
@@ -263,4 +265,5 @@ public class FacebookInstance {
 			System.out.println("Ha ocurrido un error al intentar publicar en grupo " + ex);
 		}
 	}
+
 }
