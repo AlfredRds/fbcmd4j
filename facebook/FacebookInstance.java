@@ -152,11 +152,11 @@ public class FacebookInstance {
 		}catch(FacebookException fbex) {
 			this.log.loggerInfo("Ha ocurrido un error " + fbex);
 		}
-		
 	}
 	
-	public void properties() {
-        try (InputStream input = new FileInputStream("config/facebook.properties")) {
+	public void properties() {		
+		ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        try (InputStream input = classloader.getResourceAsStream("config/facebook.properties")) {
 
             Properties prop = new Properties();
             prop.load(input);
